@@ -1,10 +1,18 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Dashboard from "./pages/Dashboard";
+import Signin from "./pages/Signin";
 
 function App() {
   return (
-    <>
-      <p>Click on the Vite and React logos to learn more</p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/signin" element={<Signin />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
