@@ -2,12 +2,12 @@ import { Navbar, TextInput, Button } from "flowbite-react";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
 import { FaMoon } from "react-icons/fa";
+import OAuth from "./OAuth";
 
 const Header = () => {
   const path = useLocation.pathname;
   return (
     <Navbar className="border-b-2">
-      {/* <OAuth /> */}
       <Link
         to="/"
         className="self-center whitespace-nowrap text-sm sm:text-xl font-semibold dark:text-white"
@@ -29,6 +29,7 @@ const Header = () => {
         <AiOutlineSearch />
       </Button>
       <div className="flex gap-2 md:order-2">
+        <OAuth />
         <Button className="w-12 h-10 hidden sm:inline" color="gray" pill>
           <FaMoon />
         </Button>
